@@ -12,7 +12,7 @@ pipeline {
             }
         }
         stage('Build Package') {
-           if(${Deployment type} == "With .fed file - Only Deployment) {
+           if ( ${Please select type of deployment} == "With .fed file - Only Deployment) {
             steps {
                 echo 'Starting Package Creation'
                 sh '''
