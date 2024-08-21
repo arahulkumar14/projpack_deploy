@@ -1,5 +1,6 @@
 echo "Starting Deployment !"
 pwd
+${env.JOB_NAME}
 cd /opt/Axway-7.7.0/apigateway/posix/bin
 pwd
 echo "Starting Package creation"
