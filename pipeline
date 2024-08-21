@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build Package') {
            
-            steps {
+           steps {
 	       if ( ${Please select type of deployment} == "With .fed file - Only Deployment") {
                 echo 'Starting Package Creation'
                 sh '''
@@ -31,7 +31,8 @@ pipeline {
                 ./projdeploy --dir=/jenagent/workspace/proj_pack_deployment --passphrase-none --name=deploypackage --type=fed --deploy-to --host-name=10.128.150.82 --port=8090 --user-name=admin --password=changeme --group-name=mygroup --includes server-1
                  echo "Deployment Completed!"
                 '''
-         } 
+                } 
+		    }
 		 }
         stage('Deploy') {
             steps {
@@ -43,5 +44,7 @@ pipeline {
                  '''
             }
         }
+	   
     }
+    
 }
