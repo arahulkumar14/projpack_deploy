@@ -17,7 +17,7 @@ pipeline {
                 sh '''
                  cd /opt/Axway-7.7.0/apigateway/posix/bin
                  pwd
-                ./projpack --create --dir="{pwd}" --passphrase-none --name=deploymentpackage --type=fed --add "{pwd}"/cfd17dd7-0637-438a-8d97-a8d522d8fd44 --projpass-none
+                ./projpack --create --dir="${pwd}" --passphrase-none --name=deploymentpackage --type=fed --add "${pwd}"/cfd17dd7-0637-438a-8d97-a8d522d8fd44 --projpass-none
                 echo 'Package Creation Completed'
                 '''
             }
