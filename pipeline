@@ -30,7 +30,7 @@ pipeline {
                 set +x
                 WD=$(pwd)
                 cd /opt/Axway-7.7.0/apigateway/posix/bin
-                ./projdeploy --dir=$WD --passphrase-none --name=deploymentpackage --type=fed --deploy-to --host-name=${host_name} --port=${port} --user-name=${username} --password=${password} --group-name=mygroup --includes server-1
+                ./projdeploy --dir=$WD --passphrase-none --name=deploymentpackage --type=fed --deploy-to --host-name=${host_name} --port=${port} --user-name=${Username} --password=${Password} --group-name=${group_name} --includes ${server}
                  set -x
                  echo "Deployment Completed!"
                  '''
